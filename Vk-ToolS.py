@@ -40,9 +40,9 @@ text = '''
 while True:
 	print(text)
 	v = int(input("Выберите номер:"))
-	sword = input('Введите ключевые символы(слова)-->')
 	def Vkpassgen():
 		import os
+		sword = input('Введите ключевые символы(слова)-->')
 		os.system("python passgen.py -f -o passwordlist.txt"+ " "+sword)
 
 	def VkBruteForceV1():

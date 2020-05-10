@@ -46,7 +46,7 @@ def function(email,passw,i):
 	return False
 
 print('\n----------{Welcome To Vk BruteForcev1}----------\n')
-file=open('passwords.txt','r')
+file=open('passwordlist.txt','r')
 
 email=input('Enter Email/Username : ')
 
